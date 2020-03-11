@@ -1,77 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import logo from './logo.svg';
+import { BrowserRouter as Router, Link, Route, Redirect } from 'react-router-dom';
 
-import './App.css';
+//Components
+import Home from './components/Home/Home';
+import ConsoleGameList from './components/ConsoleGameList/ConsolgeGameList';
 
-class App extends Component {
-  state = {
-    response: '',
-    post: '',
-    responseToPost: '',
-  };
+//Logo
+import CatalogLogo from './components/Home/RandomCatalogLogo.png';
 
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
+//Styles
+import Reset from './styles/reset.css';
 
-  callApi = async () => {
-    const response = await fetch('/api/hello');
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
-
-    return body;
-  };
-
-  handleSubmit = async e => {
-    e.preventDefault();
-    const response = await fetch('/api/world', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ post: this.state.post }),
-    });
-    const body = await response.text();
-
-    this.setState({ responseToPost: body });
-  };
-
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <p>{this.state.response}</p>
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <strong>Post to Server:</strong>
-          </p>
-          <input
-            type="text"
-            value={this.state.post}
-            onChange={e => this.setState({ post: e.target.value })}
-          />
-          <button type="submit">Submit</button>
-        </form>
-        <p>{this.state.responseToPost}</p>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <Router>
+        <nav className="navbar navbar-light RandomNavbar">
+          <Link className="navbar-brand" to="/">
+            <img src={CatalogLogo} width="200" draggable="false" alt="" />
+          </Link>
+        </nav>
+        <div className="App">
+          <Route exact={true} path="/" component={Home} />
+          <Route exact={true} path={["/NES", "/GB", "/SNES", "/N64", "/GBC", "/GBA", "/GC", "/NDS", "/3DS", "/WiiU", "/PS1", "/PS2", "/PSP", "/PC", "/Atari", "/SG", "/SMS"]} component={ConsoleGameList} />
+        </div>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
+

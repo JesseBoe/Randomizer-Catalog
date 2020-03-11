@@ -6,15 +6,16 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/api/hello', (req, res) => {
-    res.send({ express: 'Hello From Express' });
-});
+const consoleList = ["nes", "gb", "snes", "n64", "gbc", "gba", "gc", "nds", "3ds", "wiiu", "ps1", "ps2", "psp", "pc", "atari", "sg", "sms"];
 
-app.post('/api/world', (req, res) => {
-    console.log(req.body);
-    res.send(
-        `I received your POST request. This is what you sent me: ${req.body.post}`,
-    );
+var db = require('./models/GameModel.js');
+
+app.get('/api/:console', (req, res) => {
+    if (consoleList.indexOf(req.params.console) != -1) {
+        db.all(req.params.console, (data) => {
+            res.json(data);
+        })
+    }
 });
 
 if (process.env.NODE_ENV === 'production') {

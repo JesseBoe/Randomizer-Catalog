@@ -1,0 +1,29 @@
+.LogoButton {
+    max-width: 250px;
+    max-height: 250px;
+    opacity: 1;
+    transition: .1s ease;
+    backface-visibility: hidden;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    background-color: rgba(41, 40, 40, 0.4);
+
+    border: 4px;
+    border-color: rgba(41, 40, 40,1);
+    border-style: solid;
+    cursor: pointer;
+}
+
+.LogoButton:hover {
+  border-color: rgba(112,63,181,1);
+  transform: scale(1.1);
+}
+
+.collapseIcon {
+    position: absolute;
+    right: 6px;
+    top: 4px;
+    cursor: pointer;
+}

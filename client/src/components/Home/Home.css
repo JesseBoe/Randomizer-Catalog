@@ -1,0 +1,25 @@
+body{
+    background: rgb(65,65,65);
+background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 50%, rgba(65,65,65,1) 100%);
+}
+
+.RandomNavbar{
+    background-color: rgba(112,63,181,1);
+    /* background: rgb(139,92,92);
+    background: linear-gradient(0deg, rgba(139,92,92,1) 0%, rgba(112,63,181,1) 100%); */
+}
+
+.CatagoryText{
+    font-weight: 600;
+    font-size: 20;
+    color: white;
+    background-color: rgba(112,63,181,1);
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.CatagoryMain{
+    background-color: rgb(61, 61, 61);
+}
