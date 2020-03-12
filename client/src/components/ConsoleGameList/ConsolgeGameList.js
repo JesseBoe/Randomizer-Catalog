@@ -18,7 +18,7 @@ class ConsoleGameList extends React.Component {
     }
 
     callApi = async () => {
-        let db = window.location;
+        let db = window.location.pathname;
         db = db.toLowerCase();
         console.log(db);
         const response = await fetch('/api' + db);
