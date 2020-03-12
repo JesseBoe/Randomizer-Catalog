@@ -18,7 +18,10 @@ class ConsoleGameList extends React.Component {
     }
 
     callApi = async () => {
-        const response = await fetch('/api/nes');
+        let db = window.location;
+        db = db.toLowerCase();
+        console.log(db);
+        const response = await fetch('/api' + db);
         const body = await response.json();
 
         if (response.status !== 200) throw Error(body.message);
