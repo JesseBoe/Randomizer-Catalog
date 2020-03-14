@@ -22,7 +22,7 @@ class About extends React.Component {
                             <h2 className="text-header">What is this?</h2>
                             <p className="text-about">This is a website dedicated to compiling a list of video game randomizers that have been scattered across the internet.</p>
                             <h2 className="text-header">What is a Randomizer?</h2>
-                            <p className="text-about">Randmizers bring a whole new level of replayability to many old games by randomly changing various gameplay elements. These elements can be anything from enemies, level layouts, items or even difficulty. Randomizers have been steadily growing in popularity as players wish to revisit some of the classics they grew up with.</p>
+                            <p className="text-about">Randomizers bring a whole new level of replayability to many old games by randomly changing various gameplay elements. These elements can be anything from enemies, level layouts, items or even difficulty. Randomizers have been steadily growing in popularity as players wish to revisit some of the classics they grew up with.</p>
                             <ul className="list-group list-group-flush tech-used">
                                 <li className="list-group-item CatagoryText">Tech Used</li>
                                 <li className="list-group-item tech-item">SQL</li>
