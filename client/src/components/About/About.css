@@ -1,0 +1,22 @@
+.text-white {
+    color: white;
+}
+.tech-item {
+    background-color: rgb(46, 46, 46);
+}
+.tech-header {
+    background-color:rgb(149,100,219);
+}
+
+.text-header {
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+}
+.text-about {
+    text-align: left;
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: normal;
+}

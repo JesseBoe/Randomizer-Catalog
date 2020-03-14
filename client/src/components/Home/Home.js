@@ -6,6 +6,14 @@ import expandIcon from "../CatagoryButton/Logos/expand.png";
 
 import {BrowserRouter as Router, Link, Route,} from 'react-router-dom';
 
+const images = importAll(require.context('../CatagoryButton/Logos', false, /\.(png|jpe?g|svg)$/));
+
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+
 class Home extends React.Component {
 
     constructor(props) {
@@ -30,40 +38,40 @@ class Home extends React.Component {
                         <div id="collapseOne" className={this.state.collapse1 ? "card-body CatagoryMain collapse" : "card-body CatagoryMain collapse show"}>
                             <div className="row">
                                 <div onClick={() => { this.props.history.push("/NES") }} className="col-sm">
-                                    <ConsoleButton imageName="NesLogo" />
+                                    <ConsoleButton ConsoleLogo={images["NesLogo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/GB") }} className="col-sm">
-                                    <ConsoleButton imageName="GameboyLogo" />
+                                    <ConsoleButton ConsoleLogo={images["GameboyLogo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/SNES") }} className="col-sm">
-                                    <ConsoleButton imageName="SnesLogo" />
+                                    <ConsoleButton ConsoleLogo={images["SnesLogo.png"]} />
                                 </div>
                             </div>
                             <div className="row mt-4">
                                 <div onClick={() => { this.props.history.push("/N64") }} className="col-sm">
-                                    <ConsoleButton imageName="N64Logo" />
+                                    <ConsoleButton ConsoleLogo={images["N64Logo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/GBC") }} className="col-sm">
-                                    <ConsoleButton imageName="GameboyColorLogo" />
+                                    <ConsoleButton ConsoleLogo={images["GameboyColorLogo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/GBA") }} className="col-sm">
-                                    <ConsoleButton imageName="GameboyAdvanceLogo" />
+                                    <ConsoleButton ConsoleLogo={images["GameboyAdvanceLogo.png"]} />
                                 </div>
                             </div>
                             <div className="row mt-4">
                                 <div onClick={() => { this.props.history.push("/GC") }} className="col-sm">
-                                    <ConsoleButton imageName="GamecubeLogo" />
+                                    <ConsoleButton ConsoleLogo={images["GamecubeLogo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/NDS") }} className="col-sm">
-                                    <ConsoleButton imageName="NDSLogo" />
+                                    <ConsoleButton ConsoleLogo={images["NDSLogo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/3DS") }} className="col-sm">
-                                    <ConsoleButton imageName="N3DSLogo" />
+                                    <ConsoleButton ConsoleLogo={images["N3DSLogo.png"]} />
                                 </div>
                             </div>
                             <div className="row mt-4">
                                 <div onClick={() => { this.props.history.push("/WiiU") }} className="col-sm">
-                                    <ConsoleButton imageName="WiiULogo" />
+                                    <ConsoleButton ConsoleLogo={images["WiiULogo.png"]} />
                                 </div>
                                 <div className="col-sm"></div>
                                 <div className="col-sm"></div>
@@ -81,13 +89,13 @@ class Home extends React.Component {
                         <div id="collapseTwo" className={this.state.collapse2 ? "card-body CatagoryMain collapse" : "card-body CatagoryMain collapse show"}>
                             <div className="row">
                                 <div onClick={() => { this.props.history.push("/PS1") }} className="col-sm">
-                                    <ConsoleButton imageName="PS1Logo" />
+                                    <ConsoleButton ConsoleLogo={images["PS1Logo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/PS2") }} className="col-sm">
-                                    <ConsoleButton imageName="PS2Logo" />
+                                    <ConsoleButton ConsoleLogo={images["PS2Logo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/PSP") }} className="col-sm">
-                                    <ConsoleButton imageName="PSPLogo" />
+                                    <ConsoleButton ConsoleLogo={images["PSPLogo.png"]} />
                                 </div>
                             </div>
                         </div>
@@ -102,18 +110,18 @@ class Home extends React.Component {
                         <div id="collapseThree" className={this.state.collapse3 ? "card-body CatagoryMain collapse" : "card-body CatagoryMain collapse show"}>
                             <div className="row">
                                 <div onClick={() => { this.props.history.push("/PC") }} className="col-sm">
-                                    <ConsoleButton imageName="PCLogo" />
+                                    <ConsoleButton ConsoleLogo={images["PCLogo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/Atari") }} className="col-sm">
-                                    <ConsoleButton imageName="Atari2600Logo" />
+                                    <ConsoleButton ConsoleLogo={images["Atari2600Logo.png"]} />
                                 </div>
                                 <div onClick={() => { this.props.history.push("/SG") }} className="col-sm">
-                                    <ConsoleButton imageName="SegaGenesisLogo" />
+                                    <ConsoleButton ConsoleLogo={images["SegaGenesisLogo.png"]} />
                                 </div>
                             </div>
                             <div className="row mt-4">
                                 <div onClick={() => { this.props.history.push("/SMS") }} className="col-sm">
-                                    <ConsoleButton imageName="SegaMasterSystemLogo" />
+                                    <ConsoleButton ConsoleLogo={images["SegaMasterSystemLogo.png"]} />
                                 </div>
                                 <div className="col-sm"></div>
                                 <div className="col-sm"></div>                                

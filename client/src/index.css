@@ -5,9 +5,58 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: rgb(65,65,65);
+  background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 50%, rgba(65,65,65,1) 100%);
+  
+  /* background-image: url("./rpg-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   background-attachment: fixed; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.personal-links{
+    margin-left: auto;
+}
+
+.nav-link {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: initial;
+}
+.nav-link:hover{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.active {
+    color: rgba(255, 255, 255, .8);
+}
+
+.navbarLinkIcon {
+    font-size: 32px;
+    color: rgba(27, 27, 27, 0.5);
+}
+.navbarLinkIcon:hover {
+    color: rgba(0, 0, 0, 0.95);
+    cursor: pointer;
+}
+
+.RandomNavbar {
+    justify-content: left;
+    padding-bottom: 0px;
+    padding-left: 20%;
+    padding-right: 20%;
+    transition: background-color 1s;
+    background-color: rgba(94,53,152,1)
+}
+
+
+.logo{
+  transition: width .5s;
 }
