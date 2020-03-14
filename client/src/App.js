@@ -12,6 +12,7 @@ import CatalogLogo from './components/Home/RandomCatalogLogo.png';
 
 //svg
 import mySVG from './drawing3.svg'
+import mySVG2 from './drawing4.svg'
 
 //Styles
 import Reset from './styles/reset.css';
@@ -58,9 +59,9 @@ class App extends React.Component {
               <Link to="/About"><a className="nav-link" href="#">About<span class="sr-only">(current)</span></a></Link>
             </span>
             <span className="personal-links">
-              <i style={{ marginLeft: 8, marginRight: 8 }} href="mailto:JesseBoeWork@gmail.com" class="fas fa-envelope-square navbarLinkIcon"></i>
-              <i style={{ marginLeft: 8, marginRight: 8 }} href="https://github.com/JesseBoe" class="fab fa-github-square navbarLinkIcon"></i>
-              <i style={{ marginLeft: 8 }} href="https://jesseboe.github.io/Portfolio/" class="fas fa-address-card navbarLinkIcon"></i>
+              <a href="mailto:JesseBoeWork@gmail.com"><i style={{ marginLeft: 8, marginRight: 8 }} href="mailto:JesseBoeWork@gmail.com" class="fas fa-envelope-square navbarLinkIcon"></i></a>
+              <a href="https://github.com/JesseBoe"><i style={{ marginLeft: 8, marginRight: 8 }} class="fab fa-github-square navbarLinkIcon"></i></a>
+              <a href="https://jesseboe.github.io/Portfolio/"><i style={{ marginLeft: 8 }} class="fas fa-address-card navbarLinkIcon"></i></a>
             </span>
           </nav>
           <div className="App" style={{paddingTop: 80}}>
@@ -70,6 +71,9 @@ class App extends React.Component {
             <Route exact={true} path={["/NES", "/GB", "/SNES", "/N64", "/GBC", "/GBA", "/GC", "/NDS", "/3DS", "/WiiU", "/PS1", "/PS2", "/PSP", "/PC", "/Atari", "/SG", "/SMS"]} component={ConsoleGameList} />
           </div>
         </Router>
+        <div style={{position: "relative"}}>
+          <img className="svg-footer" src={mySVG2} style={{ width: "100%" }}></img>
+        </div>
       </div>
     );
   }
