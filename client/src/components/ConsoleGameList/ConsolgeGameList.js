@@ -148,8 +148,8 @@ class ConsoleGameList extends React.Component {
                                     <tr>
                                         <th onClick={() => { this.sortByName() }} scope="col" className="data-table-head"><b>Game</b><i className={this.getSortClasses("Title")}></i></th>
                                         <th scope="col"><b>Randomizer</b></th>
-                                        <th onClick={() => { this.sortByCreator() }} scope="col" className="data-table-head"><b>Creator</b> <i className={this.getSortClasses("Creator")}></i></th>
-                                        <th onClick={() => { this.sortByLastUpdate() }} scope="col" className="data-table-head"><b>Last Update</b> <i className={this.getSortClasses("Update")}></i></th>
+                                        <th onClick={() => { this.sortByCreator() }} scope="col" className="data-table-head data-table-head-min"><b>Creator</b> <i className={this.getSortClasses("Creator")}></i></th>
+                                        <th onClick={() => { this.sortByLastUpdate() }} scope="col" className="data-table-head data-table-head-min"><b>Last Update</b> <i className={this.getSortClasses("Update")}></i></th>
                                     </tr>
                                 </thead>
                                 <tbody>
