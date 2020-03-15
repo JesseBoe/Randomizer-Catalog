@@ -49,11 +49,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <img src={mySVG} style={{ width: "100%", height: "auto", position: "absolute", overflow: "hidden" }}></img>
+        <img draggable="false" src={mySVG} style={{ width: "100%", height: "auto", position: "absolute", overflow: "hidden" }}></img>
         <Router>
-          <nav id="navbar" className="navbar navbar-light RandomNavbar fixed-top">
+          <nav draggable="false" id="navbar" className="navbar navbar-light RandomNavbar fixed-top">
             <Link className="navbar-brand" to="/">
-              <img className="logo" src={CatalogLogo} width={this.state.Scrolled ? "125" : "200"} draggable="false" alt="" />
+              <img draggable="false" className="logo" src={CatalogLogo} width={this.state.Scrolled ? "125" : "200"} draggable="false" alt="" />
             </Link>
             <span className="nav-item">
               <Link to="/About"><a className="nav-link" href="#">About<span class="sr-only">(current)</span></a></Link>
@@ -72,7 +72,7 @@ class App extends React.Component {
           </div>
         </Router>
         <div style={{position: "relative"}}>
-          <img className="svg-footer" src={mySVG2} style={{ width: "100%" }}></img>
+          <img draggable="false" className="svg-footer" src={mySVG2} style={{ width: "100%" }}></img>
         </div>
       </div>
     );
