@@ -17,6 +17,10 @@ class ConsoleGameList extends React.Component {
             .catch(err => console.log(err));
     }
 
+    componentDidUpdate() {
+        $('#datatable').DataTable();
+    }
+
     callApi = async () => {
         let db = window.location.pathname.toLowerCase();
         console.log(db);
@@ -35,10 +39,10 @@ class ConsoleGameList extends React.Component {
                 <div className="container mt-4">
                     <div className="card text-center bg-dark">
                         <div className="card-header CatagoryText" href="#collapseOne">
-                            {window.location.pathname}
+                            {window.location.pathname.replace("/", "")}
                         </div>
                         <div className='card-body CatagoryMain'>
-                            <table className="table table-bordered table-dark">
+                            <table id="datatable" className="table table-bordered table-dark">
                                 <thead>
                                     <tr>
                                         <th scope="col"><b>Game</b></th>
