@@ -64,7 +64,7 @@ code {
     padding-left: 20%;
     padding-right: 20%;
     transition: background-color 1s;
-    background-color: rgba(94,53,152,1)
+    background-color: rgba(94,53,152,0)
 }
 
 
