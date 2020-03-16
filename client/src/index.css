@@ -21,6 +21,17 @@ code {
     monospace;
 }
 
+.content{
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+.sticky-footer {
+  position: relative;
+  margin-top: auto;
+}
+
 .personal-links{
     margin-left: auto;
 }
@@ -56,6 +67,7 @@ code {
     background-color: rgba(94,53,152,1)
 }
 
+
 img{
   backface-visibility: hidden;
     -webkit-user-select: none; /* Safari */        
@@ -66,7 +78,7 @@ img{
 
 .svg-footer {
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
     z-index: -1;
 }
 
