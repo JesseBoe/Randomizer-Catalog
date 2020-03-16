@@ -37,44 +37,36 @@ class Home extends React.Component {
                         </div>
                         <div id="collapseOne" className={this.state.collapse1 ? "card-body CatagoryMain collapse" : "card-body CatagoryMain collapse show"}>
                             <div className="row">
-                                <div onClick={() => { this.props.history.push("/NES") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/NES") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["NesLogo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/GB") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/GB") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["GameboyLogo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/SNES") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/SNES") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["SnesLogo.png"]} />
                                 </div>
-                            </div>
-                            <div className="row mt-4">
-                                <div onClick={() => { this.props.history.push("/N64") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/N64") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["N64Logo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/GBC") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/GBC") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["GameboyColorLogo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/GBA") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/GBA") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["GameboyAdvanceLogo.png"]} />
                                 </div>
-                            </div>
-                            <div className="row mt-4">
-                                <div onClick={() => { this.props.history.push("/GC") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/GC") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["GamecubeLogo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/NDS") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/NDS") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["NDSLogo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/3DS") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/3DS") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["N3DSLogo.png"]} />
                                 </div>
-                            </div>
-                            <div className="row mt-4">
-                                <div onClick={() => { this.props.history.push("/WiiU") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/WiiU") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["WiiULogo.png"]} />
                                 </div>
-                                <div className="col-sm"></div>
-                                <div className="col-sm"></div>
                             </div>
                         </div>
                     </div>
@@ -88,13 +80,13 @@ class Home extends React.Component {
                         </div>
                         <div id="collapseTwo" className={this.state.collapse2 ? "card-body CatagoryMain collapse" : "card-body CatagoryMain collapse show"}>
                             <div className="row">
-                                <div onClick={() => { this.props.history.push("/PS1") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/PS1") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["PS1Logo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/PS2") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/PS2") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["PS2Logo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/PSP") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/PSP") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["PSPLogo.png"]} />
                                 </div>
                             </div>
@@ -109,22 +101,18 @@ class Home extends React.Component {
                         </div>
                         <div id="collapseThree" className={this.state.collapse3 ? "card-body CatagoryMain collapse" : "card-body CatagoryMain collapse show"}>
                             <div className="row">
-                                <div onClick={() => { this.props.history.push("/PC") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/PC") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["PCLogo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/Atari") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/Atari") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["Atari2600Logo.png"]} />
                                 </div>
-                                <div onClick={() => { this.props.history.push("/SG") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/SG") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["SegaGenesisLogo.png"]} />
                                 </div>
-                            </div>
-                            <div className="row mt-4">
-                                <div onClick={() => { this.props.history.push("/SMS") }} className="col-sm">
+                                <div onClick={() => { this.props.history.push("/SMS") }} className="col-sm-12 col-md-6 col-lg-4 mb-2 mt-2">
                                     <ConsoleButton ConsoleLogo={images["SegaMasterSystemLogo.png"]} />
                                 </div>
-                                <div className="col-sm"></div>
-                                <div className="col-sm"></div>                                
                             </div>
                         </div>
                     </div>
